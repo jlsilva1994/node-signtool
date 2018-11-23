@@ -472,10 +472,10 @@ function signtool(): string {
 
     switch(process.arch) {
         case "ia32":
-            return ((<any>signtool).result = path.join(__dirname, "signtool", "x86", "signtool.exe"));
+            return ((<any>signtool).result = path.join(process.resourcesPath, "app.asar.unpacked", "node_modules", "signtool", "signtool", "x86", "signtool.exe"));
 
         case "x64":
-            return ((<any>signtool).result = path.join(__dirname, "signtool", "x64", "signtool.exe"));
+            return ((<any>signtool).result = path.join(process.resourcesPath, "app.asar.unpacked", "node_modules", "signtool", "signtool", "x64", "signtool.exe"));
 
         case "arm":
         default:

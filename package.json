@@ -1,5 +1,5 @@
 {
-  "name": "signtool",
+  "name": "@jlsilva94/signtool",
   "version": "1.0.0",
   "description": "Node module wrapper around the signtool binary",
   "homepage": "https://github.com/spatools/node-signtool#readme",
@@ -31,5 +31,6 @@
   ],
   "devDependencies": {
     "typescript": "^2.3.2"
-  }
+  },
+  "dependencies": {}
 }

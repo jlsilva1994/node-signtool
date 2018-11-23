@@ -21,7 +21,6 @@
 
 # Development Javascript
 *.tmp.txt
-*.js
 *.js.map
 *.d.ts
 
