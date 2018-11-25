@@ -1,6 +1,6 @@
 {
   "name": "@jlsilva94/signtool",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Node module wrapper around the signtool binary",
   "homepage": "https://github.com/spatools/node-signtool#readme",
   "author": "SPA Tools (spa@touchify.co)",
