@@ -219,11 +219,14 @@ function undef(val) {
 function signtool() {
     if (signtool.result)
         return signtool.result;
+    const basePath = process.env.NODE_ENV !== 'development' 
+        ?  path.join(process.resourcesPath, "app.asar.unpacked", "node_modules", "signtool")
+        : __dirname
     switch (process.arch) {
         case "ia32":
-            return (signtool.result = path.join(process.resourcesPath, "app.asar.unpacked", "node_modules", "signtool", "signtool", "x86", "signtool.exe"));
+            return (signtool.result = path.join(basePath, "signtool", "x86", "signtool.exe"));
         case "x64":
-            return (signtool.result = path.join(process.resourcesPath, "app.asar.unpacked", "node_modules", "signtool", "signtool", "x64", "signtool.exe"));
+            return (signtool.result = path.join(basePath, "signtool", "x64", "signtool.exe"));
         case "arm":
         default:
             throw new Error("Signtool is not supported in this environment");
